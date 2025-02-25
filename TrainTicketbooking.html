@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Train Ticket Booking</h1>
+    <form action="/submit_booking" method="POST">
+    
+        <label for="departure">Departure Station:</label>
+        <input type="text" id="departure" name="departure" placeholder="Enter departure station" required>
+
+        <label for="arrival">Arrival Station:</label>
+        <input type="text" id="arrival" name="arrival" placeholder="Enter arrival station" required>
+        
+        <label for="travel_date">Travel Date:</label>
+        <input type="date" id="travel_date" name="travel_date" required>
+        
+        <label for="class">Class:</label>
+
+        <select id="class" name="class" required>
+            <option value="sleeper">Sleeper</option>
+            <option value="ac3">AC 3 Tier</option>
+            <option value="ac2">AC 2 Tier</option>
+            <option value="ac1">AC 1 Tier</option>
+        </select>
+    
+        <label for="passengers">Number of Passengers:</label>
+        <input type="number" id="passengers" name="passengers" min="1" max="6" value="1" required>
+
+        <button type="submit">Book Ticket</button>
+    </form>
+</div>
+</body>
+</html>

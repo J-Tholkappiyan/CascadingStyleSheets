@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { width: 50%; margin: auto; padding: 20px; background: white; box-shadow: 0px 0px 10px gray; margin-top: 50px; }
+        h2 { text-align: center; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        .btn-container { text-align: center; margin-top: 20px; }
+        .btn { background-color: #6610f2; color: white; padding: 10px 20px; border: none; cursor: pointer; margin: 5px; }
+        .btn:hover { background-color: #5700e2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Transaction Details</h2>
+        <form>
+            <label for="acc-number">Account Number:</label>
+            <input type="text" id="acc-number" name="acc-number" required>
+
+            <label for="trans-type">Transaction Type:</label>
+            <select id="trans-type" name="trans-type">
+                <option value="deposit">Deposit</option>
+                <option value="withdrawal">Withdrawal</option>
+                <option value="transfer">Transfer</option>
+            </select>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="receiver">Receiver Account (if applicable):</label>
+            <input type="text" id="receiver" name="receiver">
+
+            <label for="date">Transaction Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="note">Additional Notes:</label>
+            <input type="text" id="note" name="note">
+
+            <div class="btn-container">
+                <button type="submit" class="btn">Submit</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

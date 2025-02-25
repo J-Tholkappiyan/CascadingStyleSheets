@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiting Card</title>
+    <style>
+        /* Centering the card */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            font-family: Arial, sans-serif;
+        }
+
+        /* Visiting Card Container */
+        .card {
+            background: white;
+            width: 400px;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border: 5px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Border Gradient */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 15px;
+            z-index: -1;
+            background: linear-gradient(45deg, #ff6b6b, #6b6bff, #32a852);
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Company Logo */
+        .logo {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        /* Title Styling */
+        .company-name {
+            color: #333;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            color: #777;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Information */
+        .contact {
+            font-size: 16px;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Website Link */
+        .website {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .website:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://qvesys.in/images/cropped-Doc1.png" alt="Qvesys Logo" class="logo">
+        <h2 class="company-name">Qvesys Technology</h2>
+        <p class="tagline">Innovating Technology Solutions</p>
+        <p class="contact">26+ Years of Experience</p>
+        <p class="contact">Affiliated with a German Company</p>
+        <p class="contact">📍 Chennai, India</p>
+        <p class="contact">📞 Contact: 12345678</p>
+        <a href="https://qvesys.in/" class="website">Visit Website</a>
+    </div>
+
+</body>
+</html>

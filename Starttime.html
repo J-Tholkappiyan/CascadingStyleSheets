@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <label>Start time</label>
+    <input type="time" id="a">
+    <label>End time</label>
+    <input type="time" id="b" onfocusout="if(this.value<document.getElementById('a')){this.value='00:00';alert('end time must be less than start time');}"
+</body>
+</html>
